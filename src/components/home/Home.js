@@ -39,7 +39,7 @@ function Home() {
         setCart(storedCart);
       }
     }
-  },);
+  },[navigate]);
 
   return (
     <div

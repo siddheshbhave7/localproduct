@@ -16,7 +16,7 @@ const HeaderNavbar = () => {
 
   useEffect(() => {
     setIsUserLoggedIn(checkUser());
-  }, );
+  },[] );
 
   return (
     <div
