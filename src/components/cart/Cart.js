@@ -24,8 +24,6 @@ function Cart() {
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter((prod) => prod.id !== productId);
     setCart(updatedCart);
-
-    const user = JSON.parse(localStorage.getItem("user"));
     localStorage.setItem(`cart`, JSON.stringify(updatedCart));
   };
 
@@ -33,7 +31,6 @@ function Cart() {
     setLoading(true);
     setTimeout(() => {
       alert("Order placed successfully!");
-      const user = JSON.parse(localStorage.getItem("user"));
       localStorage.removeItem(`cart`);
       setCart([]);
       setLoading(false);
